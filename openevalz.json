@@ -1,0 +1,51 @@
+{
+  "openevalz_version": 1,
+  "eval": {
+    "id": "paperbench",
+    "slug": "paperbench",
+    "title": "PaperBench: Evaluating AI's Ability to Replicate AI Research (Work In Progress)",
+    "group": "Coding",
+    "tags": [
+      "Agent",
+      "AI R&D"
+    ],
+    "source": "core"
+  },
+  "upstream": {
+    "repo": "https://github.com/UKGovernmentBEIS/inspect_evals",
+    "path": "src/inspect_evals/paperbench",
+    "inspect_ai": "0.3.260",
+    "eval_version": "3-B",
+    "dependency": "paperbench"
+  },
+  "execution": {
+    "class": "sandbox-local",
+    "cost_class": "high",
+    "sandbox": [
+      "solver",
+      "scorer"
+    ],
+    "requires_internet": false,
+    "fast": false,
+    "supports_k8s": false,
+    "environment": ""
+  },
+  "tasks": [
+    {
+      "name": "paperbench",
+      "samples": 23
+    }
+  ],
+  "total_samples": 23,
+  "external_assets": [
+    {
+      "type": "huggingface",
+      "source": "josancamon/paperbench",
+      "state": "pinned"
+    }
+  ],
+  "scaffolds": [
+    "baseline"
+  ],
+  "generated": "2026-08-25"
+}
